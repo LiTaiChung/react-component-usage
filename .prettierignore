@@ -1,0 +1,16 @@
+# Ignore build output directories
+dist/
+
+# Ignore node modules
+node_modules/
+
+# Ignore environment variables files
+.env
+.env.*
+
+# Ignore lock files
+yarn.lock
+package-lock.json
+
+# Ignore logs
+*.log

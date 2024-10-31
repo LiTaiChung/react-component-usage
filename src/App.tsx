@@ -1,11 +1,10 @@
-import { RouterProvider } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom';
 
-import './App.css'
+import routes from './routes';
 
 function App() {
-  return (
-    <RouterProvider router={router} fallbackElement={<p>Initial Load...</p>} />
-  )
+  const appRoutes = useRoutes(routes);
+  return appRoutes;
 }
 
-export default App
+export default App;
