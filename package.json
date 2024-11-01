@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-excalidraw": "node tools/component-usage/component-usage.js"
+    "generate-excalidraw": "node tools/component-usage/component-usage.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
@@ -19,11 +21,21 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
+    "storybook-dependency-tree": "^0.0.18",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@eslint/js": "^9.13.0",
+    "@storybook/addon-essentials": "^8.4.1",
+    "@storybook/addon-interactions": "^8.4.1",
+    "@storybook/addon-onboarding": "^8.4.1",
+    "@storybook/blocks": "^8.4.1",
+    "@storybook/builder-vite": "^8.4.1",
+    "@storybook/react": "^8.4.1",
+    "@storybook/react-vite": "^8.4.1",
+    "@storybook/test": "^8.4.1",
     "@types/glob": "^8.1.0",
     "@types/node": "^22.8.4",
     "@types/react": "^18.3.12",
@@ -35,13 +47,21 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-storybook": "^0.10.2",
     "glob": "^11.0.0",
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "storybook": "^8.4.1",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.12.2",
     "vite": "^5.4.10"
+  },
+  "packageManager": "yarn@4.5.1",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
